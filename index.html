@@ -22,9 +22,21 @@
 
         <!-- Nav Items -->
         <div class="nav-items">
-        <div><a href="#projects">Projects</a></div>
+        <!-- <div><a href="#projects">Projects</a></div>
         <div><a href="#skills">Skills</a></div>
-        <div><a href="#contactme">Contact Me</a></div>
+        <div><a href="#contactme">Contact Me</a></div> -->
+        <!-- partial:index.partial.html -->
+            <ul class="nav-bar">
+                <li style="--clr:#00ade1">
+                <a href="#projects" data-text="&nbsp;Projects">&nbsp;Projects&nbsp;</a>
+                </li>
+                <li style="--clr:#ff6492">
+                <a href="#skills" data-text="&nbsp;Skills">&nbsp;Skills&nbsp;</a>
+                </li>
+                <li style="--clr:#ffdd1c">
+                <a href="#contactme" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -311,6 +323,19 @@
         </div>
         </div>
     </footer>
+
+    <!-- cursor style -->
+    <div id="cursor"></div>
+
+    <script>
+        var cursor=document.getElementById("cursor");
+        document.onmousemove=function(e)
+        {
+            cursor.style.left= (e.pageX-25) + "px";
+            cursor.style.top= (e.pageY-25) + "px";
+            cursor.style.display="block";
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>

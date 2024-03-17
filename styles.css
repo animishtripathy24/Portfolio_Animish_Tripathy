@@ -4,12 +4,29 @@
     }
     body {
     overflow-x: hidden;
+    cursor: grab;
     }
     * {
     margin: 0;
     padding: 0;
     font-family: "Be Vietnam Pro", sans-serif;
     scroll-behavior: smooth;
+    }
+
+    #cursor{
+        height:50px;
+        width:50px;
+        background: transparent;
+        border:3px solid black;
+        border-color: coral;
+        border-radius: 50%;
+        position: absolute;
+        display: none;
+        transition-duration: .3s;
+        transition-timing-function: ease-out;
+    }
+    div:hover ~ #cursor{
+        transform: scale(0.5);
     }
     a{
     text-decoration: none;
@@ -19,12 +36,14 @@
     margin: 0 auto;
     }
 
-    /* Navbnar Style Start*/
+    /* Navbar Style Start*/
     .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 1rem;
+    position: relative;
+    z-index: 2;
     }
     .logo-group {
     display: flex;
@@ -71,6 +90,46 @@
     }
     /* Navbar Style End */
 
+    /*partial items*/
+    @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+    ul{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-height:100px;
+    margin:10px;
+    right: -200px;
+    z-index: 2;
+    }
+    ul li {
+    position: relative;
+    list-style: none;
+    }
+    ul li a {
+    font-size: 2.5em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: black;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    }
+    ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+    }
+    ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr))
+    }
+    /* partial items ends */
     /* Hero Section Start */
     /* Hero Left Section Start */
     .hero-section {
@@ -86,10 +145,10 @@
 
     .faded-text {
     user-select: none;
-    font-size: 7em;
+    font-size: 6em;
     color: rgb(231, 231, 231);
     z-index: -0;
-    bottom: -16%;
+    bottom: -13.5%;
     left: -5%;
     font-weight: bold;
     transition: all 3s;
@@ -538,12 +597,12 @@
     width: 50%;
     }
     .skill-fade-text {
-    font-size: 15em;
+    font-size: 13em;
     font-weight: bold;
     color: rgb(231, 231, 231);
-    bottom: -34.5%;
+    bottom: -37.5%;
     overflow-y: hidden;
-    right: -25%;
+    right: 1%;
     user-select: none;
     }
     .skill-container-right {
@@ -552,6 +611,7 @@
     flex-wrap: wrap;
     width: 50%;
     position: relative;
+    z-index: 2;
     justify-content: center;
     }
     .blob-style {
@@ -635,6 +695,8 @@
     .contactus-container {
     width: 100%;
     background-color: rgb(231, 231, 231);
+    position: relative;
+    z-index: 2;
     }
     .contactus-heading {
     padding-top: 2rem;
@@ -727,6 +789,7 @@
     padding-top: 5rem;
     padding-bottom: 0rem;
     padding: 5rem;
+    z-index: 2;
     }
     .footer-wrapper {
     display: flex;
