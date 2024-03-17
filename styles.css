@@ -229,10 +229,12 @@
     filter: grayscale(1);
     transition: all 1s;
     animation: scaleImage 5s linear infinite;
+    border-radius: 50%;
     }
     .user-image img {
     object-fit: cover;
     z-index: -9;
+    border-radius: 50%;
     }
     @keyframes scaleImage {
     0% {
