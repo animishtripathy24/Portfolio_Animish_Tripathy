@@ -5,6 +5,10 @@
     body {
     overflow-x: hidden;
     cursor: grab;
+    background-image: url('./background.jpg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     }
     * {
     margin: 0;
@@ -83,7 +87,7 @@
         padding: 0 8em;
     }
     }
-    @media (max-width:1000px) {
+    @media (max-width:900px) {
     .nav-items {
         display: none;
     }
@@ -99,7 +103,7 @@
     gap: 10px;
     max-height:100px;
     margin:10px;
-    right: -200px;
+    right: -100px;
     z-index: 2;
     }
     ul li {
@@ -107,7 +111,8 @@
     list-style: none;
     }
     ul li a {
-    font-size: 2.5em;
+    font-size: 2em;
+    font-weight: 700;
     text-decoration: none;
     letter-spacing: 2px;
     line-height: 1em;
@@ -146,9 +151,9 @@
     .faded-text {
     user-select: none;
     font-size: 6em;
-    color: rgb(231, 231, 231);
-    z-index: -0;
-    bottom: -13.5%;
+    color: rgb(145, 140, 140);
+    z-index: -1;
+    bottom: -14.5%;
     left: -5%;
     font-weight: bold;
     transition: all 3s;
@@ -171,7 +176,7 @@
     line-height: 45px;
     }
     .role {
-    color: #4e45d5;
+    color: #3427ee;
     font-weight: 800;
     }
     .hero-section-description {
@@ -510,12 +515,13 @@
 
     #project1 {
     background-image: url(./projects/Project1.png);
-    /* background-size: cover; */
+    background-size: cover;
     }
     #project2 {
     background-image: url(./projects/Project2.png);
     margin-left: 120px;
     background-size: cover;
+    background-position:center;
     }
     #project3 {
     background-image: url(./projects/Project3.png);
@@ -601,7 +607,7 @@
     .skill-fade-text {
     font-size: 13em;
     font-weight: bold;
-    color: rgb(231, 231, 231);
+    color: rgb(145, 140, 140);;
     bottom: -37.5%;
     overflow-y: hidden;
     right: 1%;
@@ -656,6 +662,7 @@
     text-align: justify;
     }
     .skill-subHeading p {
+    font-weight: 700;
     margin: 15px 0;
     }
 
