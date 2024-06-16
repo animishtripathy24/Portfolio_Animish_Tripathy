@@ -1,6 +1,6 @@
     @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
     :root {
-    --bgOrange: #e84949;
+    --bgOrange: #3427ee;
     }
     body {
     overflow-x: hidden;
@@ -153,7 +153,7 @@
     font-size: 6em;
     color: rgb(145, 140, 140);
     z-index: -1;
-    bottom: -14.5%;
+    bottom: -8.5%;
     left: -5%;
     font-weight: bold;
     transition: all 3s;
@@ -514,7 +514,7 @@
     }
 
     #project1 {
-    background-image: url(./projects/Project1.png);
+    background-image: url(./projects/climate\ canvas.gif);
     background-size: cover;
     }
     #project2 {
@@ -529,8 +529,12 @@
     background-size: cover;
     }
     #project4 {
-    background-image: url(./projects/Project4.png);
+    background-image: url(./projects/ODI\ World\ Cup.gif);
     margin-left: 120px;
+    }
+    #project5 {
+    background-image: url(./projects/Engineering\ Graduate\ Salary\ Prediction.gif);
+    background-size: cover;
     }
 
     @media (max-width:1300px) {
@@ -608,7 +612,7 @@
     font-size: 13em;
     font-weight: bold;
     color: rgb(145, 140, 140);;
-    bottom: -37.5%;
+    bottom: -29.5%;
     overflow-y: hidden;
     right: 1%;
     user-select: none;
